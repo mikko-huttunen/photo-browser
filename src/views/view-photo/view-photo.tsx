@@ -40,7 +40,6 @@ export const ViewPhoto: React.FC = () => {
                 srcSet={photo.download_url}
                 src={photo.download_url}
                 alt={photo.download_url}
-                loading="lazy"
             />
         )
     }
