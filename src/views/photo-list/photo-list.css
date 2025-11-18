@@ -1,0 +1,13 @@
+.container {
+    max-width: 1200px;
+    margin: 80px auto 20px;
+}
+
+.highlight {
+    background-color: white;
+    display: inline-block;
+}
+
+.highlight img:hover {
+    opacity: .5;
+}

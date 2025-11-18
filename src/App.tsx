@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {NavigationToolbar} from "./components/toolbar/navigation-toolbar";
+import {PhotoList} from "./views/photo-list/photo-list";
+import {Navigate, Route, Routes} from "react-router-dom";
+import {ViewPhoto} from "./views/view-photo/view-photo";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <NavigationToolbar/>
+        <Routes>
+            <Route path="/" element={<Navigate to="/images" replace={true}/>} />
+            <Route path="/images" element={<PhotoList/>} />
+            <Route path="/images/:id" element={<ViewPhoto/>}/>
+        </Routes>
     </div>
   );
 }

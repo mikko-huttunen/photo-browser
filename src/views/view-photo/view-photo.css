@@ -1,0 +1,15 @@
+.photo-container {
+    margin: 80px auto 20px;
+}
+
+.photo-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+.photo-info {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
